@@ -128,7 +128,7 @@ public class RollingDice : MonoBehaviour
                     //for robot
                     else if (GameManager.gm.totalPlayerCanPlay == 1 && GameManager.gm.rolledDice == GameManager.gm.managerRollingDice[2])
                     {
-                        if (numberGot != 6 && outPieces < 4)
+                        if (numberGot == 6 && outPieces < 4)
                         {
                             MakePlayerReadyToMove(outPlayerToMove());
                         }
@@ -341,7 +341,7 @@ public class RollingDice : MonoBehaviour
                 }
             }
 
-            GameManager.gm.StepsToMove = 0;
+            
             if (isPathPointAvailableToMove(numberofMoveStep, outPlayerPiece.numberOfStepsAlreadyMove, pathPointToMoveOn))
             {
 
@@ -384,7 +384,7 @@ public class RollingDice : MonoBehaviour
                 outPlayerPiece.previousePath = outPlayerPiece.currentPath;
 
 
-                // GameManager.gm.StepsToMove = 0;
+                 GameManager.gm.StepsToMove = 0;
             }
             GameManager.gm.canPlayerMove = true;
             GameManager.gm.RollingDiceManager();

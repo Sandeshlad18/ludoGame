@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
             Invoke("roled",0.6f);
         }
     }
-    //litel bit delay
+  
     void roled()
     {
         GameManager.gm.managerRollingDice[2].mouseRoll();
@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviour
         if (i == 0) { if (GameManager.gm.redPlayerCompleted == 4) { return i + 1; } }
         else if (i == 1) { if (GameManager.gm.redPlayerCompleted == 4) { return i + 1; } }
         else if (i == 2) { if (GameManager.gm.redPlayerCompleted == 4) { return i + 1; } }
-        else if (i == 3) { if (GameManager.gm.bluePlayerCompleted == 4) { return i + 1; } }
+        else if (i == 3) { if (GameManager.gm.redPlayerCompleted == 4) { return i + 1; } }
         return i;
     }
 }
